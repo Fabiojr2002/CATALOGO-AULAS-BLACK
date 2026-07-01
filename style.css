@@ -1,0 +1,78 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Arial Black', Arial, sans-serif; }
+.catalog { position: relative; width: 100%; max-width: 680px; margin: 0 auto; border-radius: 14px; overflow: hidden; background: #0a0a0a; border: 1px solid #222; }
+.slide { display: none; position: relative; width: 100%; min-height: 520px; flex-direction: column; justify-content: flex-end; }
+.slide.active { display: flex; }
+.slide-bg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 0; }
+.slide-overlay { position: absolute; inset: 0; z-index: 1; }
+.sc { position: relative; z-index: 2; padding: 30px 34px 82px; display: flex; flex-direction: column; justify-content: flex-end; min-height: 520px; }
+.gold { color: #D4A017; }
+.slide-num { position: absolute; top: 14px; right: 18px; font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 1px; z-index: 10; font-family: Arial, sans-serif; }
+.nav { position: absolute; bottom: 18px; left: 0; right: 0; display: flex; align-items: center; justify-content: center; gap: 12px; z-index: 10; }
+.nav button { background: rgba(0,0,0,0.6); border: 1.5px solid #D4A017; color: #D4A017; border-radius: 50%; width: 36px; height: 36px; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.nav button:hover { background: #D4A017; color: #000; }
+.dots { display: flex; gap: 6px; align-items: center; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.25); cursor: pointer; transition: all 0.2s; }
+.dot.active { background: #D4A017; width: 20px; border-radius: 4px; }
+
+.logo-brand { font-size: 46px; font-weight: 900; color: #D4A017; letter-spacing: -2px; line-height: 1; }
+.logo-brand span { color: #fff; }
+.logo-sub { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 6px; font-family: Arial, sans-serif; font-weight: 400; margin-bottom: 16px; }
+.capa-title { font-size: 40px; font-weight: 900; color: #fff; line-height: 1.1; }
+.capa-sub { font-size: 26px; font-weight: 900; color: #D4A017; font-style: italic; margin-bottom: 16px; }
+.badge-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.badge { background: rgba(0,0,0,0.55); border: 1px solid rgba(212,160,23,0.5); color: #D4A017; font-size: 9px; font-weight: 900; padding: 4px 10px; border-radius: 20px; font-family: Arial, sans-serif; }
+
+.sec-title { font-size: 20px; font-weight: 900; color: #fff; letter-spacing: 2px; margin-bottom: 2px; }
+.sec-sub { font-size: 10px; color: rgba(255,255,255,0.45); letter-spacing: 1px; margin-bottom: 12px; font-family: Arial, sans-serif; }
+.grade-grid { display: grid; grid-template-columns: 48px 1fr 1fr; gap: 2px; border-radius: 6px; overflow: hidden; }
+.grade-header { background: #D4A017; color: #000; font-size: 9px; font-weight: 900; padding: 6px; text-align: center; letter-spacing: 0.5px; font-family: 'Arial Black', Arial; }
+.grade-dia { font-weight: 900; color: #D4A017; font-size: 10px; font-family: 'Arial Black', Arial; background: rgba(0,0,0,0.7); padding: 7px 8px; border-bottom: 0.5px solid rgba(255,255,255,0.04); display: flex; align-items: center; }
+.grade-cell { background: rgba(0,0,0,0.55); padding: 6px 8px; font-size: 9px; color: rgba(255,255,255,0.6); font-family: Arial, sans-serif; border-bottom: 0.5px solid rgba(255,255,255,0.04); }
+.hora { font-size: 11px; font-weight: 900; color: #fff; display: block; font-family: 'Arial Black', Arial; }
+.aula-tag { color: #D4A017; font-size: 8px; font-weight: 900; display: block; }
+.hora2 { margin-top: 4px; }
+.grade-note { font-size: 9px; color: rgba(255,255,255,0.3); font-family: Arial, sans-serif; margin-top: 8px; text-align: center; line-height: 1.5; }
+
+.aula-tag-top { font-size: 9px; color: rgba(255,255,255,0.5); letter-spacing: 3px; font-family: Arial, sans-serif; margin-bottom: 3px; }
+.aula-name-big { font-size: 44px; font-weight: 900; line-height: 1; text-transform: uppercase; margin-bottom: 2px; }
+.aula-tipo-tag { display: inline-block; font-size: 9px; font-weight: 900; padding: 3px 10px; border-radius: 3px; letter-spacing: 1px; margin-bottom: 12px; }
+.stat-row { display: flex; gap: 8px; margin-bottom: 10px; }
+.stat-box { flex: 1; background: rgba(0,0,0,0.65); border-radius: 7px; padding: 9px 10px; text-align: center; }
+.stat-box .sv { font-size: 20px; font-weight: 900; font-family: 'Arial Black', Arial; }
+.stat-box .sl { font-size: 8px; color: rgba(255,255,255,0.45); font-family: Arial, sans-serif; margin-top: 2px; letter-spacing: 0.3px; }
+.info-row { display: flex; gap: 8px; margin-bottom: 8px; }
+.info-card { flex: 1; background: rgba(0,0,0,0.65); border-radius: 7px; padding: 10px 12px; border-top: 2px solid; }
+.ic-label { font-size: 8px; color: rgba(255,255,255,0.4); letter-spacing: 2px; font-family: Arial, sans-serif; margin-bottom: 5px; }
+.hor-row { display: flex; align-items: center; gap: 6px; margin-bottom: 3px; }
+.hor-dia { font-size: 8px; font-weight: 900; padding: 2px 5px; border-radius: 3px; white-space: nowrap; }
+.hor-hora { font-size: 13px; font-weight: 900; color: #fff; font-family: 'Arial Black', Arial; }
+.highlight-card { background: rgba(0,0,0,0.65); border-radius: 7px; padding: 10px 12px; border-left: 3px solid; }
+.hc-label { font-size: 8px; color: rgba(255,255,255,0.4); letter-spacing: 2px; font-family: Arial, sans-serif; margin-bottom: 5px; }
+.hc-text { font-size: 11px; color: rgba(255,255,255,0.8); font-family: Arial, sans-serif; line-height: 1.5; }
+.hc-text strong { color: #fff; font-family: 'Arial Black', Arial; }
+
+.arte-marcial-badge { position: absolute; top: 18px; left: 18px; z-index: 10; }
+.amb-icon { font-size: 36px; line-height: 1; display: block; }
+.amb-belt { font-size: 8px; color: rgba(255,255,255,0.45); letter-spacing: 3px; font-family: Arial, sans-serif; }
+
+.end-title { font-size: 26px; font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 3px; }
+.end-title span { color: #D4A017; }
+.end-sub { font-size: 9px; color: rgba(255,255,255,0.4); letter-spacing: 1px; margin-bottom: 12px; font-family: Arial, sans-serif; }
+.citem { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 0.5px solid rgba(255,255,255,0.08); }
+.cico { font-size: 16px; width: 22px; text-align: center; }
+.ctxt p { font-size: 9px; color: rgba(255,255,255,0.4); font-family: Arial, sans-serif; }
+.ctxt strong { font-size: 12px; color: #fff; }
+.hor-func { background: rgba(212,160,23,0.1); border: 1px solid rgba(212,160,23,0.25); border-radius: 7px; padding: 9px 12px; margin: 10px 0; }
+.hor-func-title { font-size: 8px; color: #D4A017; letter-spacing: 2px; font-family: Arial, sans-serif; margin-bottom: 5px; font-weight: 900; }
+.hor-func-row { display: flex; justify-content: space-between; font-size: 10px; color: rgba(255,255,255,0.75); font-family: Arial, sans-serif; padding: 2px 0; }
+.hor-func-row span:last-child { color: #D4A017; font-weight: 900; }
+.btns-row { display: flex; gap: 7px; margin-top: 10px; }
+.btn-link { display: flex; align-items: center; justify-content: center; gap: 5px; border-radius: 6px; padding: 9px 10px; font-size: 10px; font-weight: 900; text-decoration: none; font-family: 'Arial Black', Arial, sans-serif; flex: 1; text-align: center; transition: opacity 0.2s; }
+.btn-link:hover { opacity: 0.8; }
+.btn-green { border: 2px solid #25D366; color: #25D366; background: rgba(0,0,0,0.5); }
+.btn-purple { border: 2px solid #E1306C; color: #E1306C; background: rgba(0,0,0,0.5); }
+.btn-blue { border: 2px solid #4a90d9; color: #4a90d9; background: rgba(0,0,0,0.5); }
+.logo-end { text-align: center; margin-top: 12px; }
+.logo-end .lb { font-size: 30px; font-weight: 900; color: #D4A017; letter-spacing: -1px; }
+.logo-end .lb span { color: #fff; }
