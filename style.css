@@ -78,3 +78,7 @@ body { font-family: 'Arial Black', Arial, sans-serif; min-height: 100vh; display
 .logo-end { text-align: center; margin-top: 12px; }
 .logo-end .lb { font-size: 30px; font-weight: 900; color: #D4A017; letter-spacing: -1px; }
 .logo-end .lb span { color: #fff; }
+@media (max-width: 480px) {
+  body { padding: 12px; }
+  .catalog { border-radius: 10px; max-width: 100%; }
+}
