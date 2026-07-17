@@ -22,7 +22,8 @@ body { font-family: 'Arial Black', Arial, sans-serif; min-height: 100vh; display
 .capa-title { font-size: 40px; font-weight: 900; color: #fff; line-height: 1.1; }
 .capa-sub { font-size: 26px; font-weight: 900; color: #D4A017; font-style: italic; margin-bottom: 16px; }
 .badge-row { display: flex; flex-wrap: wrap; gap: 6px; }
-.badge { background: rgba(0,0,0,0.55); border: 1px solid rgba(212,160,23,0.5); color: #D4A017; font-size: 9px; font-weight: 900; padding: 4px 10px; border-radius: 20px; font-family: Arial, sans-serif; }
+.badge { background: rgba(0,0,0,0.55); border: 1px solid rgba(212,160,23,0.5); color: #D4A017; font-size: 9px; font-weight: 900; padding: 4px 10px; border-radius: 20px; font-family: Arial, sans-serif; display: inline-flex; align-items: center; gap: 3px; }
+.badge-icon { width: 1em; height: 1em; object-fit: contain; flex: 0 0 auto; }
 
 .sec-title { font-size: 20px; font-weight: 900; color: #fff; letter-spacing: 2px; margin-bottom: 2px; }
 .sec-sub { font-size: 10px; color: rgba(255,255,255,0.45); letter-spacing: 1px; margin-bottom: 12px; font-family: Arial, sans-serif; }
@@ -54,7 +55,7 @@ body { font-family: 'Arial Black', Arial, sans-serif; min-height: 100vh; display
 .hc-text strong { color: #fff; font-family: 'Arial Black', Arial; }
 
 .arte-marcial-badge { position: absolute; top: 18px; left: 18px; z-index: 10; }
-.amb-icon { font-size: 36px; line-height: 1; display: block; }
+.amb-icon { width: 36px; height: 36px; object-fit: contain; display: block; }
 .amb-belt { display: block; margin-top: 8px; font-size: 8px; color: rgba(255,255,255,0.45); letter-spacing: 3px; font-family: Arial, sans-serif; }
 
 .end-title { font-size: 26px; font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 3px; }
